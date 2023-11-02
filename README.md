@@ -1,3 +1,1 @@
-
-
-
+# Scale_Equivarinat_Fourier_Layer
