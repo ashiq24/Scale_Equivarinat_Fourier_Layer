@@ -44,4 +44,5 @@ python3 train_script GPU_ID
 ```
 
 ```train_script: train_1d.py, train_mnist.py, train_stl.py```
+
 ```GPU_ID: int, device id of the GPU on train on```
