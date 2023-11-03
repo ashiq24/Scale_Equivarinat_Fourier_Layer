@@ -22,6 +22,8 @@ from dataloader.mnist_data_module import get_augmentation
 AVAILABLE_DATASETS = get_available_pl_modules()
 AVAILABLE_MODELS = get_available_models()
 
+
+flags.DEFINE_string('project_name','ashiq/scale-eq-public','Neptune project name')
 # Dataset
 FLAGS = flags.FLAGS
 flags.DEFINE_string('data_path', './data', 'Dataset location')
@@ -110,7 +112,7 @@ def main(argv):
       log_path=log_path,
       name=name,
       params=params,
-      project_name='ashiq/scale-eq-public',
+      project_name=FLAGS.project_name,
       version=None,
       source_files=FLAGS.source_files,
       capture_stdout=FLAGS.capture_stdout,

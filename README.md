@@ -31,3 +31,17 @@ A notebook containing demonstration of the scale equivariant layer and thier use
 
 ## Running the Models
 
+Steps:
+- Download the project
+- Update the ```model``` flag to slect desired model
+- Update the ```project_name``` flag to matchg the Neptune project
+- Update the ```data_path``` to the dataset loaction.
+
+The execut the following commands
+
+```bash
+python3 train_script GPU_ID
+```
+
+```train_script: train_1d.py, train_mnist.py, train_stl.py```
+```GPU_ID: int, device id of the GPU on train on```

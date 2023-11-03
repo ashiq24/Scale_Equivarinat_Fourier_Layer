@@ -27,6 +27,7 @@ from dataloader.mnist_data_module import get_augmentation
 AVAILABLE_DATASETS = get_available_pl_modules()
 AVAILABLE_MODELS = get_available_models()
 
+flags.DEFINE_string('project_name','ashiq/scale-eq-public','Neptune project name')
 # Dataset
 FLAGS = flags.FLAGS
 flags.DEFINE_string('data_path', './data', 'Dataset location')
@@ -58,7 +59,7 @@ flags.DEFINE_integer('pool_size', 13, 'pool_size')
 
 
 # Trainer
-flags.DEFINE_integer('batch_size', 32, 'Batch size')
+flags.DEFINE_integer('batch_size', 16, 'Batch size')
 flags.DEFINE_float('learning_rate', 0.01, 'Learning rate')
 flags.DEFINE_float('weight_decay', 1e-2, 'Weight Decay')
 flags.DEFINE_integer('epochs', 200, 'Training epochs')
@@ -89,9 +90,7 @@ def main(argv):
     print('Unprocessed args:', argv[1:])
   gpu_device = int(argv[1])
   print("Running on GPU ", gpu_device)
-  if len(argv)>2:
-    FLAGS.model = argv[2]
-  # Model checkpoint
+
 
   mc = pl.callbacks.ModelCheckpoint(
       filename='{epoch}-{val_acc:.5f}',
@@ -122,7 +121,7 @@ def main(argv):
       log_path=log_path,
       name=name,
       params=params,
-      project_name='ashiq/scale-eq', # your Neptune project Name
+      project_name=FLAGS.project_name,
       version=None,
       source_files=FLAGS.source_files,
       capture_stdout=FLAGS.capture_stdout,
