@@ -3,7 +3,7 @@ from torch.utils.data import DataLoader, random_split
 import pytorch_lightning as pl
 
 class YESNODataModule(pl.LightningDataModule):
-    def __init__(self, data_dir: str = "./", batch_size: int = 32):
+    def __init__(self, data_dir: str = "./data", batch_size: int = 32):
         super().__init__()
         self.data_dir = data_dir
         self.batch_size = batch_size

@@ -52,9 +52,9 @@ flags.DEFINE_string('normalizer', 'instance', 'Type of normlaization to use.')
 
 
 # Trainer
-# Hyper-paramter for fourier_mnist is 
+# Hyper-paramter for fourier_mnist model is 
 # lr = 1e-2, weight_decay = 3e-2
-# For mixer Models, lr = 1e-3, weight_decay = 1e-5
+# For fourier_mixer and  fourier_mixer_shift_invarinat models, lr = 1e-3, weight_decay = 1e-5
 
 flags.DEFINE_integer('batch_size', 128, 'Batch size')
 flags.DEFINE_float('learning_rate', 1e-2, 'Learning rate')

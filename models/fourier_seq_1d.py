@@ -87,9 +87,11 @@ class FourierSeq1d(AbstractBaseClassifierModel):
     x3 = self.L3(x2)
     x3 = self.NL3(x3)
 
+    # instead of taking the absolute value of Fourier coefficients
+    # we can also resample the Funtion on a fix grid by iFFT
+    
     fe = torch.abs(x3)
     fe = fe.mean(dim = 2)
-    #fe = fe.permute(0,2,1)
 
     f2 = self.res_dict(fe)
     
