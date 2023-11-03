@@ -73,7 +73,7 @@ def set_neptune(
     }
     if not(source_files): kwargs["source_files"] = []
     nl = pl_loggers.NeptuneLogger(
-      api_key= "eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiI0Mjk1YWYxMy0xZDA3LTRiYTctOWY4OS0zODJlY2ZjNzJjMmQifQ==",#os.environ["NEPTUNE_API_TOKEN"],
+      api_key= os.environ["NEPTUNE_API_TOKEN"],
       project=project_name,
       name=name,
       **kwargs,

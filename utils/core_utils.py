@@ -15,6 +15,14 @@ def loadcfg(fn):
     raise
 
 def resample_1d(x: torch.tensor, num: int, complex = True, skip_nyq = False):
+    '''
+    parameters:
+    ----------
+    x: torch.tensor, data to resample
+    num: int, Final size of the resampled data
+    complex: bool, treat the data as complex function
+    skip_nyq: bool, skip the Nyquist frequency
+    '''
     if not complex:
         X = torch.fft.rfft(x, norm ='forward')
         Y = torch.zeros(X.shape[0], X.shape[1], num//2 + 1, dtype=X.dtype)
@@ -43,6 +51,14 @@ def resample_1d(x: torch.tensor, num: int, complex = True, skip_nyq = False):
         return torch.fft.ifft(Y, norm ='forward').to(x.device)
 
 def resample(x, num, complex = True, skip_nyq = False):
+    '''
+    parameters:
+    ----------
+    x: torch.tensor, data to resample shpae (batch, channel, H, W)
+    num: int, Final size of the resampled data (num[0], num[1])
+    complex: bool, treat the data as complex function
+    skip_nyq: bool, skip the Nyquist frequency
+    '''
     if not complex:
         assert num[0] == num[1]
         X = torch.fft.rfft2(x, norm ='forward')
@@ -77,6 +93,14 @@ def resample(x, num, complex = True, skip_nyq = False):
         return torch.fft.ifft2(Y, norm ='forward').to(x.device)
 
 def down_sample_keepsize_1d(X, num, keep_size, skip_nyq = False):
+    '''
+    parameters:
+    ----------
+    X: torch.tensor complex, Fourier Coefficients of the Function
+    num: int, Number of Fourier modes to keep
+    keep_size: int, Output size of the data
+    skip_nyq: bool, skip the Nyquist frequency
+    '''
     assert num <= keep_size
     Y = torch.zeros(X.shape[0], X.shape[1],keep_size//2 + 1, dtype=X.dtype)
     en = min(num[1]//2, X.shape[-2]//2)
@@ -138,6 +162,9 @@ def sliding_windows(a, W):
     return torch.tensor(M.T.tolist(), dtype=torch.float)
 
 def get_diag_mask(mode_size, band_size =3, dtype = torch.cfloat):
+  '''
+  Produce a mask to limit the mixing of Fourier Coefficients
+  '''
   mask = sliding_windows([1]*band_size, mode_size//2+1)
   if mode_size%2==0:
     mask = torch.nn.functional.pad(

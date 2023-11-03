@@ -34,9 +34,8 @@ flags.DEFINE_enum('dataset', 'scale_stl',AVAILABLE_DATASETS, 'Dataset')
 flags.DEFINE_integer('training_size',7000, "Training set size.")
 flags.DEFINE_integer('test_size',5000, "Test set size.")
 flags.DEFINE_string('data_resize_mode', 'None', 'Dataset padding mode - None, pad, or resize')
-flags.DEFINE_string('data_downscale_mode', 'ideal', 'Dataset downscale mode - "ideal"/"bicubic" ')
-flags.DEFINE_string('augmentation', 'circular_shift', 'data Augmentation scheme - "add_noise", "circular_shift"  or "None"') #Defined in core_util
-
+flags.DEFINE_string('data_downscale_mode', 'ideal', 'Dataset downscale mode')
+flags.DEFINE_string('augmentation', 'circular_shift', 'data Augmentation scheme - "add_noise", "circular_shift"  or "None"')
 flags.DEFINE_string('model', 'fourier_stl', 'Model name. fourier_stl')
 flags.DEFINE_integer('input_channel', 3, 'number of input Channel')
 flags.DEFINE_integer('C1', 32, 'Width/number of channel in 1nd Convolutional layer')
@@ -69,7 +68,7 @@ flags.DEFINE_float('step_gamma_lr', 0.1, 'gamma for lr scheduler')
 
 # Misc.
 flags.DEFINE_integer(
-    'seed', 0, 'Random seed for shift-consistency experiments')
+    'seed', 0, 'Random seed for experiments')
 flags.DEFINE_boolean(
     'dryrun', False, 'Run sanity check only on 1 batch of each split')
 flags.DEFINE_boolean('autoresume', False,
@@ -123,7 +122,7 @@ def main(argv):
       log_path=log_path,
       name=name,
       params=params,
-      project_name='ashiq/scale-eq-public',
+      project_name='ashiq/scale-eq', # your Neptune project Name
       version=None,
       source_files=FLAGS.source_files,
       capture_stdout=FLAGS.capture_stdout,
@@ -158,8 +157,6 @@ def main(argv):
   # seletion training and testing scales
   train_scales =[i for i in range(49,98,1)]
   test_scales = [i for i in range(49,98,1)]
-  print(train_scales)
-  print(test_scales)
   # Dataset
   dm = ScaleSTLDataModule(
       data_dir=FLAGS.data_path,

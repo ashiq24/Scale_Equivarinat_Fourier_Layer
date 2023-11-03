@@ -56,7 +56,7 @@ flags.DEFINE_float('step_gamma_lr', 0.1, 'gamma for lr scheduler')
 
 # Misc.
 flags.DEFINE_integer(
-    'seed', 42, 'Random seed for shift-consistency experiments')
+    'seed', 42, 'Random seed')
 flags.DEFINE_boolean(
     'dryrun', False, 'Run sanity check only on 1 batch of each split')
 flags.DEFINE_boolean('autoresume', False,

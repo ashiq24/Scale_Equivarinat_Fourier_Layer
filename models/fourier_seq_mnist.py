@@ -21,6 +21,25 @@ class FourierSeqMist(AbstractBaseClassifierModel):
   def __init__(self, in_channel, learning_rate, weight_decay,C1 =32, C2 = 64,C3 = 128, C4 = 128, FC1 = 200, dropout_fc1 = 0.0,\
               dropout_fc2 = 0.7, activation_con = relu, activation_mlp = relu, mixer_band = -1, normalizer = 'instance',\
               increment = 1, max_res =28, base_res = 8, pool_size = 14, **kwargs):
+    '''
+    Model implementation of Fourier Scale Equivariant Model with Scale Equivariant Nonlinearities of MNIST dataset.
+
+    parameters
+    ----------
+    in_channel : int, nummber of input channels
+    output_channel : int, number of output channels
+    learning_rate : float, learning rate
+    weight_decay : float, weight decay
+    C1, C2, C3, C4 : int, width of the 1st, 2nd, 3rd and 4th layers
+    FC1 : int, width of the fully connected layer
+    dropout_fc1, dropout_fc2  : float, dropout rate of the fully connected layer
+    activation_con, activation_mlp : str, activation function of the convolutional layers and the fully connected layer
+    normalizer : str, normalization type of the convolutional layers
+    incremnt: int, increment of the NonLinear layers
+    max_res : int, maximum resolution under consideration
+    base_res : int, minimum resolution under consideration
+    pool_size : int, size of the pooling layer for final features before fattenting.
+    '''
     super(FourierSeqMist, self).__init__(**kwargs)
     # Log hyperparameters
     self.save_hyperparameters()
@@ -177,6 +196,10 @@ class FourierSeqMist(AbstractBaseClassifierModel):
     return loss,b_loss, Ensemble
   
   def get_weight_group(self,):
+    '''
+    this function is used to get the weight group of the network and implement
+    different weight decay for different layers.
+    '''
     weight_group = []
     for L in self.children():
       if hasattr(L, 'norm'):

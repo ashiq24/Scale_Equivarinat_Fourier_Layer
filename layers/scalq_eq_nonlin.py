@@ -34,6 +34,10 @@ class scaleEqNonlin(nn.Module):
 
 
     def forward(self, x_ft):
+        '''
+        parameters
+        x_ft : complex torch.Tensor, Fourier Transform of the input
+        '''
         x = torch.real(torch.fft.ifft2(x_ft, norm = 'forward'))
         x_out = torch.zeros(x.shape[0], x.shape[1], x.shape[2], x.shape[3]//2 +1, dtype=x_ft.dtype).to(x_ft.device)
 
@@ -119,7 +123,8 @@ class scaleEqNonlinMaxp(nn.Module):
 
     def forward(self, x_ft):
         '''
-        x_ft : input Fourier Coefficient
+        parameters
+        x_ft : complex torch.Tensor, Fourier Transform of the input
         '''
         x = torch.real(torch.fft.ifft2(x_ft, norm = 'forward'))
 
@@ -216,7 +221,8 @@ class scaleEqNonlin1d(nn.Module):
 
     def forward(self, x_ft):
         '''
-        x_ft : input Fourier Coefficient
+        parameters
+        x_ft : complex torch.Tensor, Fourier Transform of the input
         '''
         x = torch.real(torch.fft.ifft(x_ft, norm = 'forward'))
         x_out = torch.zeros(x.shape[0], x.shape[1], x.shape[2]//2 + 1, dtype=x_ft.dtype).to(x_ft.device)
