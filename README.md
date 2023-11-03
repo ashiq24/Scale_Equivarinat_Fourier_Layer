@@ -4,6 +4,7 @@
 
 [Md Ashiqur Rahman](https://sites.google.com/view/ashiqurrahman/curriculum-vitae?authuser=0),
 [Raymond A. Yeh](https://www.raymond-yeh.com/)
+
 Purdue University
 
 <p align="center">
@@ -14,6 +15,8 @@ Purdue University
 # Overview
 This is the official implementation of "Truly Scale-Equivariant Deep Nets with Fourier Layers" accepted at NeurIPS 2023.
 
+In computer vision, models must be able to adapt to changes in image resolution to effectively carry out tasks such as image segmentation; This is known as scale-equivariance. Recent works have made progress in developing scale-equivariant convolutional neural networks, e.g., through weight-sharing and kernel resizing. However, these networks are not truly scale-equivariant in practice. Specifically, they do not consider anti-aliasing as they formulate the down-scaling operation in the continuous domain. To address this shortcoming, we directly formulate down-scaling in the discrete domain with consideration of anti-aliasing. We then propose a novel architecture based on Fourier layers to achieve truly scale-equivariant deep nets, i.e., absolute zero equivariance-error. Following prior works, we test this model on MNIST-scale and STL-10 datasets. Our proposed model achieves competitive classification performance while maintaining zero equivariance-error.
+
 ## Setup Dependencies
 For a full list of requirements, please refer to ***Scale_Equivarinat_Fourier_Layer/requirements.txt***. To install the dependencies, please execute:
 
@@ -23,15 +26,7 @@ pip install -r requirements.txt
 
 
 ## Demo
-For notebook demonstrations of our proposed LPS (LPD and LPU) layers, please refer to the ***demo*** directory.
 
-To run the notebook, please execute:
-```
-conda install -c conda-forge notebook
-conda install -c conda-forge nb_conda_kernels
-conda install -c conda-forge matplotlib
-jupyter-notebook demo
-```
 
 ## Results and Pre-trained models
 
