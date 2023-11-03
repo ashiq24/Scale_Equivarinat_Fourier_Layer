@@ -59,7 +59,7 @@ flags.DEFINE_integer('pool_size', 13, 'pool_size')
 
 
 # Trainer
-flags.DEFINE_integer('batch_size', 16, 'Batch size')
+flags.DEFINE_integer('batch_size', 32, 'Batch size')
 flags.DEFINE_float('learning_rate', 0.01, 'Learning rate')
 flags.DEFINE_float('weight_decay', 1e-2, 'Weight Decay')
 flags.DEFINE_integer('epochs', 200, 'Training epochs')
