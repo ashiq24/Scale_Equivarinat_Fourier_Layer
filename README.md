@@ -8,7 +8,7 @@
 Purdue University
 
 <p align="center">
-<img src='https://raymondyeh07.github.io/learnable_polyphase_sampling/resource/pipeline.png' width=800>
+<img src='https://github.com/ashiq24/Scale_Equivarinat_Fourier_Layer/blob/web/resource/pipeline.png' width=800>
 </p>
 
 
@@ -26,18 +26,8 @@ pip install -r requirements.txt
 
 
 ## Demo
+A notebook containing demonstration of the scale equivariant layer and thier uses in Deep neural networks is available in the nodebook ```demo_and_quickstart.ipynb```. The notebook can also be executed on Good Colab followin the link  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing)
 
 
-## Results and Pre-trained models
+## Running the Models
 
-#### Experiments Setup for Image Classification (ImageNet)
-
-- Download the ILSVRC2012 dataset from its [official repository](https://image-net.org/challenges/LSVRC/2012/), uncompress it into the dataset folder (e.g. `/learn_poly_sampling/datasets/ILSVRC2012`) and split it into train and val partitions using [this script](https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh).
-
-- Classification accuracy or shift consistency can be computed by setting the `--eval_mode` flag as either `class_accuracy` or `shift_consistency`, respectively.
-
-#### Results for Image Classification (ImageNet)
-To reproduce our results in Tab. 2 \& 3, run the scripts included in ```learn_poly_sampling/scripts``` with our pre-trained models.
-
-### [Pre-trained Classification Models](https://uofi.box.com/s/pql7u3c7x8zifp0m46xhe2uduwwazcad)
-Please refer to the link above to download all our pre-trained classification models. Note that our evaluation scripts assume the checkpoints are stored at ```learn_poly_sampling/checkpoints/classification```.
