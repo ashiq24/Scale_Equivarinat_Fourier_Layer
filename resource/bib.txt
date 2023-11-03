@@ -1,0 +1,7 @@
+@inproceedings{rahman-neurips2023-truly,
+  title = {Truly Scale-Equivariant Deep Nets with Fourier Layers},
+  author = {Rahman, Md Ashiqur and Yeh, Raymond A},
+  booktitle = {Neural Information Processing Systems (NeurIPS)},
+  year = {2023},
+}
+
