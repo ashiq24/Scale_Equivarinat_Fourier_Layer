@@ -1,6 +1,6 @@
 # Truly Scale-Equivariant Deep Nets with Fourier Layers
 
-### [[Project Page]](https://ashiq24.github.io/Scale_Equivarinat_Fourier_Layer/) [[Paper (NeurIPS 2023)]](https://neurips.cc/virtual/2023/poster/71980)
+### [[Project Page]](https://ashiq24.github.io/Scale_Equivarinat_Fourier_Layer/) [[Paper (NeurIPS 2023)]](https://arxiv.org/abs/2311.02922)
 
 [Md Ashiqur Rahman](https://sites.google.com/view/ashiqurrahman/curriculum-vitae?authuser=0),
 [Raymond A. Yeh](https://www.raymond-yeh.com/)
