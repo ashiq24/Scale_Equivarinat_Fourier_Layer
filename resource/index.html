@@ -1,0 +1,137 @@
+<html>
+  <meta name="robots" content="index, follow">
+
+  <head>
+    <title> Truly Scale-Equivariant Deep Nets with Fourier Layers </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="theme.css" rel="stylesheet" media="screen">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VKY1JVCE3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-1VKY1JVCE3');
+    </script>
+  </head>
+
+  <main>
+    <div class="container pb-5">
+      <!-- Title -->
+      <div class="pt-4 text-center">
+        <h1>  Truly Scale-Equivariant Deep Nets with Fourier Layers </h1>
+      </div>
+
+      <!-- Authors -->
+      <div class="row py-3 justify-content-md-center">
+        <div class="col-sm-auto">
+          <a href="https://sites.google.com/view/ashiqurrahman/"><h4>Md Ashiqur Rahman</h4></a>
+        </div>
+        <div class="col-sm-auto">
+          <h4><a href="http://www.raymond-yeh.com">Raymond A. Yeh</a></h4>
+        </div>
+      </div>
+
+    <!-- Schools -->
+    <div class="row justify-content-md-center py-1">
+      <div class="col-lg-auto">
+        <h4>Purdue University</h4>
+      </div>
+    </div>
+
+
+    <!-- Conference -->
+    <div class="row">
+      <div class="py-3 col-lg text-center">
+        <h4> Neural Information Processing Systems (NeurIPS), 2023 </h4>
+      </div>
+    </div>
+
+    <!-- Useful links-->
+    <div class="row justify-content-md-center">
+      <div class="col-md-auto">
+        <h4><a href="https://arxiv.org/abs/2311.02922">Paper</a></h4>
+      </div>
+      <div class="col-md-auto">
+        <h4><a href="https://github.com/ashiq24/Scale_Equivarinat_Fourier_Layer/">Code</a></h4>
+      </div>
+      <div class="col-md-auto">
+        <h4><a href="./resource/bib.txt">Bibtex</a></h4>
+      </div>
+    </div>
+
+    <!-- Teaser here-->
+    <div class="py-4 text-center">
+        <img src="./resource/pipeline.png" class="img-fluid" style="height:500px">
+    </div>
+
+    <br>
+
+    <h2>Abstract</h2>
+    <p>
+      In computer vision, models must be able to adapt to changes in image resolution to effectively carry out tasks such as image segmentation; This is known as scale-equivariance. Recent works have made progress in developing scale-equivariant convolutional neural networks, e.g., through weight-sharing and kernel resizing. However, these networks are not truly scale-equivariant in practice. Specifically, they do not consider anti-aliasing as they formulate the down-scaling operation in the continuous domain. To address this shortcoming, we directly formulate down-scaling in the discrete domain with consideration of anti-aliasing. We then propose a novel architecture based on Fourier layers to achieve truly scale-equivariant deep nets, i.e., absolute zero equivariance-error. Following prior works, we test this model on MNIST-scale and STL-10 datasets. Our proposed model achieves competitive classification performance while maintaining zero equivariance-error.
+    </p>
+
+    <br>
+    <h2>Materials</h2>
+    <div class="row justify-content-md-center">
+        <div class="col-4">
+            <div class="text-center">
+                <a href="">
+                    <img class="img-responsive img-rounded center-block" src="resource/paper_thumb.jpg" style="height:300px">
+                </a>
+                <br>
+                <a href="https://arxiv.org/abs/2311.02922">[Paper]</a>
+            </div>
+        </div>
+        
+        <div class="col-6">
+            <div class="text-center">
+                <a href="resource/poster.pdf">
+                    <img class="img-responsive img-rounded center-block" src="resource/poster_thumb.png" style="height:300px">
+                </a>
+                <br>
+                <a href="resource/poster_thumb.pdf">[Poster]</a>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <h2>Code</h2>
+    <div class="text-center">
+        <a href="https://github.com/ashiq24/Scale_Equivarinat_Fourier_Layer/">
+            <img class="img-responsive img-rounded center-block" src="./resource/github_logo.png" style="width: 330px">
+        </a>
+        <br>
+        <a href="https://github.com/ashiq24/Scale_Equivarinat_Fourier_Layer/">[GitHub]</a>
+    </div>
+
+    <h2> Demo and Quick Start </h2>
+    <div class="text-center">
+        <a href="https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing">
+            <img class="img-responsive img-rounded center-block" src="./resource/colab.png" style="width: 330px">
+        </a>
+        <br>
+        <a href="https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing">[Google Colab]</a>
+    </div>
+
+    
+    <h2> Citation </h2>
+    <div class="bg-light">
+    <pre align="left">
+@inproceedings{rahman-neurips2023-truly,
+    title = {Truly Scale-Equivariant Deep Nets with Fourier Layers},
+    author = {Rahman, Md Ashiqur and Yeh, Raymond A},
+    booktitle = {Neural Information Processing Systems (NeurIPS)},
+    year = {2023},
+}</pre>
+    </div>
+
+    </div>
+  </main>
+
+</html>
