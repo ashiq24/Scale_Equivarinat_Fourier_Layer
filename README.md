@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 
 ## Demo
-A notebook containing a demonstration of the scale equivariant layer and their uses in Deep neural networks is available in the notebook ```demo_and_quickstart.ipynb```. The notebook can also be executed on Good Colab following the link  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing)
+A notebook containing a demonstration of the scale equivariant layer and their uses in Deep neural networks is available in the notebook ```demo_and_quickstart.ipynb```. The notebook can also be executed on Google Colab by following the link  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing)
 
 ## Running Tests
 To run the equivarinace test of each layer, run the following command
