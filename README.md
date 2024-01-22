@@ -8,7 +8,7 @@
 Department of Computer Science, Purdue University
 
 <p align="center">
-<img src='https://github.com/ashiq24/Scale_Equivarinat_Fourier_Layer/blob/web/resource/pipeline.png' width=850>
+<img src='https://ashiq24.github.io/Scale_Equivarinat_Fourier_Layer/resource/poster_thumb.png' width=1000>
 </p>
 
 
