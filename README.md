@@ -2,8 +2,7 @@
 
 # Truly Scale-Equivariant Deep Nets with Fourier Layers
 
-![Animation](https://raw.githubusercontent.com/ashiq24/Scale_Equivarinat_Fourier_Layer/refs/heads/main/image_feature_animation_6.gif)
-![Animation](https://raw.githubusercontent.com/ashiq24/Scale_Equivarinat_Fourier_Layer/refs/heads/main/image_feature_animation_7.gif)
+
 
 ### [[Project Page]](https://ashiq24.github.io/Scale_Equivarinat_Fourier_Layer/) [[Paper (NeurIPS 2023)]](https://arxiv.org/abs/2311.02922) [[Quick Start Demo] ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing)
 
@@ -12,10 +11,12 @@
 
 Department of Computer Science, Purdue University
 
-<p align="center">
-<img src='https://ashiq24.github.io/Scale_Equivarinat_Fourier_Layer/resource/poster_thumb.png' width=1000>
-</p>
+**Generic Model**
+![Animation](https://github.com/ashiq24/Scale_Equivarinat_Fourier_Layer/blob/main/vizs/image_feature_animation_6_base.gif)
+**Ours**
+![Animation](https://raw.githubusercontent.com/ashiq24/Scale_Equivarinat_Fourier_Layer/refs/heads/main/vizs/image_feature_animation_6_ours_.gif)
 
+**Our features remain consistent across varying input resolutions, dynamically adapting their spatial resolution to match the input image.**
 
 # Overview
 This is the official implementation of "Truly Scale-Equivariant Deep Nets with Fourier Layers" accepted at NeurIPS 2023.
