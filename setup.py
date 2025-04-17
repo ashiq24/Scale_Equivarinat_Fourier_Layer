@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='scale-equivariant-fourier-layer',
+    name='scale_equivariant_fourier_layer',  # changed to use underscores
     version='0.1.0',
     author='Md Ashiqur Rahman',
     author_email='rahman79@purdue.edu',
