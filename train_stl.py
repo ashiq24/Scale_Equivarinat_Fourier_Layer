@@ -8,22 +8,22 @@ from absl import app, flags, logging
 from pytorch_lightning.callbacks import LearningRateMonitor
 import torch
 import sys
-from callbacks import AutoResumeState, OneEpochStop
-import clargs.train_opts
-from dataloader.stl_data_module import ScaleSTLDataModule
-import clargs.data_opts
-from models.fourier_seq_stl import FourierSeqStl
+from scale_eq.callbacks import AutoResumeState, OneEpochStop
+import scale_eq.clargs.train_opts
+from scale_eq.dataloader.stl_data_module import ScaleSTLDataModule
+import scale_eq.clargs.data_opts
+from scale_eq.models.fourier_seq_stl import FourierSeqStl
 from torchvision import transforms
-import clargs.logger_opts
-from dataloader import get_pl_datamodule, get_available_pl_modules
-from models import get_model, get_available_models
-from utils.logger_utils import set_logger
+import scale_eq.clargs.logger_opts
+from scale_eq.dataloader import get_pl_datamodule, get_available_pl_modules
+from scale_eq.models import get_model, get_available_models
+from scale_eq.utils.logger_utils import set_logger
 from torch.optim.lr_scheduler import StepLR
-from tests.test_equievarience import TestEquivarinecError, GetAccuracy
+from scale_eq.tests.test_equievarience import TestEquivarinecError, GetAccuracy
 import numpy as np
-from utils.core_utils import Cutout
-from layers.complex_modules import get_activation
-from dataloader.mnist_data_module import get_augmentation
+from scale_eq.utils.core_utils import Cutout
+from scale_eq.layers.complex_modules import get_activation
+from scale_eq.dataloader.mnist_data_module import get_augmentation
 AVAILABLE_DATASETS = get_available_pl_modules()
 AVAILABLE_MODELS = get_available_models()
 
