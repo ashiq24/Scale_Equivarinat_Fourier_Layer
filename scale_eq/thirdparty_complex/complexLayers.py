@@ -12,7 +12,7 @@ from torch.nn import Conv2d, Linear, BatchNorm1d, BatchNorm2d, Conv1d
 from torch.nn import ConvTranspose2d
 from .complexFunctions import complex_relu, complex_max_pool2d, complex_avg_pool2d, complex_tanh, complex_sigmoid, complex_gelu, complex_selu
 from .complexFunctions import complex_dropout, complex_dropout2d
-from utils.core_utils import get_pweights
+from scale_eq.utils.core_utils import get_pweights
 
 
 def apply_complex(fr, fi, input, dtype=torch.complex64):

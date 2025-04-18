@@ -10,7 +10,7 @@ from torchvision.datasets import MNIST
 from .scale_mnist import ScaleMNIST
 from .custom_sampler import CustomRandomSampler
 from sklearn.model_selection import train_test_split
-from utils.core_utils import AddUniformNoise, AddCircularShift
+from scale_eq.utils.core_utils import AddUniformNoise, AddCircularShift
 
 
 def None_func():

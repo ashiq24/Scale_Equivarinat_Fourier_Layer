@@ -10,9 +10,9 @@ from scale_eq.layers.scalq_eq_nonlin import scaleEqNonlin1d
 from .core import AbstractBaseClassifierModel
 from timm.utils import accuracy
 import numpy as np
-from layers.complex_modules import SpectralDropout, ComplexBatchNorm1dSim, ComplexBatchNorm2dSim, \
+from scale_eq.layers.complex_modules import SpectralDropout, ComplexBatchNorm1dSim, ComplexBatchNorm2dSim, \
     ComplexLayerNorm1d, ComplexLayerNorm2d, complex_tanh, complex_relu, enblock2d, get_block2d, modRelu, relu
-from thirdparty_complex.complexLayers import ComplexConv2d, ComplexMaxPool2d, ComplexConv1d
+from scale_eq.thirdparty_complex.complexLayers import ComplexConv2d, ComplexMaxPool2d, ComplexConv1d
 from math import ceil
 
 

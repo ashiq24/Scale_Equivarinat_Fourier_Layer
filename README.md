@@ -26,19 +26,19 @@ In computer vision, models must be able to adapt to changes in image resolution 
 For a full list of requirements, please refer to ***Scale_Equivarinat_Fourier_Layer/requirements.txt***. To install the dependencies, please execute:
 
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
 
 ## Demo
 A notebook containing a demonstration of the scale equivariant layer and their uses in Deep neural networks is available in the notebook ```demo_and_quickstart.ipynb```. The notebook can also be executed on Google Colab by following the link  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing)
 
-## Running Tests
-To run the equivarinace test of each layer, run the following command
-```bash
-cd si_neural_opt_code
-nose2
-```
+## Using the model
+The scale equivariant convolution and non-linearities works in complex Fourier domain. So the input and output both in terms of Fourier Co-efficient.
+
+
+
+
 ## Running the Models
 
 Steps:
