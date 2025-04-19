@@ -22,9 +22,10 @@ The proposed layers maintain consistent feature representations across varying i
 
 
 # Overview
-This is the official implementation of "Truly Scale-Equivariant Deep Nets with Fourier Layers" accepted at NeurIPS 2023.
+This is the official implementation of **"Truly Scale-Equivariant Deep Nets with Fourier Layers"**, accepted at NeurIPS 2023.
 
-In computer vision, models must be able to adapt to changes in image resolution to effectively carry out tasks such as image segmentation; This is known as scale-equivariance. Recent works have made progress in developing scale-equivariant convolutional neural networks, e.g., through weight-sharing and kernel resizing. However, these networks are not truly scale-equivariant in practice. Specifically, they do not consider anti-aliasing as they formulate the down-scaling operation in the continuous domain. To address this shortcoming, we directly formulate down-scaling in the discrete domain with consideration of anti-aliasing. We then propose a novel architecture based on Fourier layers to achieve truly scale-equivariant deep nets, i.e., absolute zero equivariance-error. Following prior works, we test this model on MNIST-scale and STL-10 datasets. Our proposed model achieves competitive classification performance while maintaining zero equivariance-error.
+We address the challenge of scale-equivariance in vision models by proposing a novel architecture based on **Fourier layers** that achieves **zero equivariance error**. Unlike prior approaches that assume a continuous domain and overlook anti-aliasing, our method formulates downscaling directly in the **discrete domain** with anti-aliasing built in. Evaluated on the MNIST scale and STL-10, our model demonstrates competitive classification performance while ensuring exact scale invariance.
+
 
 ## 🛠️ Setup & Installation
 
@@ -111,8 +112,8 @@ with torch.no_grad():
     print("Convolved Output Shape: ", real_output.shape)
 ```
 
-## Demo
-A notebook containing a demonstration of the scale equivariant layer and their uses in Deep neural networks is available in the notebook ```demo_and_quickstart.ipynb```. The notebook can also be executed on Google Colab by following the link  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing)
+## Demo: How to use the Fourier layers in a model
+A notebook containing a demonstration of the scale equivariant layer and its uses in Deep neural networks is available in the notebook ```demo_and_quickstart.ipynb```. The notebook can also be executed on Google Colab by following the link  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing)
 
 ## Running the Experiments
 To regenerate the experiment of the paper,r please install the dependencies in `regen_results_req.txt`
